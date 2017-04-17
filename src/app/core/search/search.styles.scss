@@ -1,0 +1,9 @@
+:host {
+  display: flex;
+  padding-top: 15px;
+  flex-direction: column;
+
+  .submit {
+    max-width: 150px;
+  }
+}
