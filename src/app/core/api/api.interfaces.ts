@@ -1,9 +1,9 @@
-export interface SearchMovies {
+export interface MovSearchParams {
   query: string;
   page?: number;
 }
 
-export interface Movies {
+export interface Movie {
   poster_path: string;
   adult: boolean;
   overview: string;
@@ -22,7 +22,7 @@ export interface Movies {
 
 export interface MoviesResponse {
   page: number;
-  results: Movies[];
+  results: Movie[];
   total_results: number;
   total_pages: number;
 }
