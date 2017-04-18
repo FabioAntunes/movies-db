@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../api';
 
 @Component({
   selector: 'mv-navbar',
@@ -6,7 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navbar.styles.scss']
 })
 export class NavbarComponent implements OnInit {
-  constructor() { }
+  apiKey = '';
+  constructor(private api: ApiService) { }
 
   ngOnInit() { }
+
+  onChange(value) {
+    this.api.apiKey = value;
+  }
 }

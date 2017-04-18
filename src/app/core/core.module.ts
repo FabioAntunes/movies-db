@@ -1,10 +1,16 @@
 import { NgModule } from '@angular/core';
+import { HttpModule } from '@angular/http';
+import { FormsModule } from '@angular/forms';
 
 import { NavbarComponent } from './navbar';
 import { SearchComponent } from './search';
+import { ApiService } from './api';
 
 @NgModule({
-  imports: [],
+  imports: [
+    HttpModule,
+    FormsModule
+  ],
   exports: [
     NavbarComponent,
     SearchComponent
@@ -13,6 +19,8 @@ import { SearchComponent } from './search';
     NavbarComponent,
     SearchComponent
   ],
-  providers: []
+  providers: [
+    ApiService
+  ]
 })
 export class CoreModule { }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../api';
 
 @Component({
   selector: 'mv-search',
@@ -6,7 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./search.styles.scss']
 })
 export class SearchComponent implements OnInit {
-  constructor() { }
+  constructor(private apiService: ApiService) { }
 
   ngOnInit() { }
+
+  onClick() {
+    this.apiService.searchMovies({query: 'Matrix'}).subscribe(res => {
+      console.log(res);
+    })
+  }
 }

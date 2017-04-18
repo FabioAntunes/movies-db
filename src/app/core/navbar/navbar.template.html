@@ -3,7 +3,7 @@
     <a class="navbar-brand" href="#">Movs</a>
 
     <div class="key-input">
-        <input class="form-control" type="text" placeholder="API Key">
+        <input class="form-control" [ngModel]="apiKey" (ngModelChange)="onChange($event)" type="text" placeholder="API Key">
     </div>
   </div>
 </nav>
