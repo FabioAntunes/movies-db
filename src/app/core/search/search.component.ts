@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, NavigationExtras } from '@angular/router';
 import { ApiService } from '../api';
 
 @Component({
@@ -7,13 +8,17 @@ import { ApiService } from '../api';
   styleUrls: ['./search.styles.scss']
 })
 export class SearchComponent implements OnInit {
-  constructor(private apiService: ApiService) { }
+  search = '';
+  constructor(private router: Router) { }
 
   ngOnInit() { }
 
   onClick() {
-    this.apiService.searchMovies({query: 'Matrix'}).subscribe(res => {
-      console.log(res);
-    })
+    let navigationExtras: NavigationExtras = {
+      queryParams: {
+        query: this.search
+      }
+    };
+    this.router.navigate(['/'], navigationExtras);
   }
 }
