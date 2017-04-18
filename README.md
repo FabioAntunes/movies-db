@@ -1,5 +1,14 @@
 # MoviesDb
 
+Install node dependencies `npm i`
+
+Run `npm start` to start the dev server.
+
+The api key is hardcoded for simplicity, feel free to change it on the top right corner.
+
+
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
 
 ## Development server
