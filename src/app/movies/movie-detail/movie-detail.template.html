@@ -1,0 +1,15 @@
+<div class="loading-spinner" [hidden]="!loading"></div>
+
+<div *ngIf="!loading">
+  <figure>
+    <img [src]="movie.poster_path | image" [attr.alt]="movie.original_title">
+  </figure>
+  <aside>
+    <h1>{{ movie.original_title }}</h1>
+    <p>{{ movie.overview }}</p>
+    <p><strong>Release</strong>{{ movie.release_date }}</p>
+    <p><strong>Language</strong>{{ movie.original_language }}</p>
+    <p><strong>Popularity</strong>{{ movie.popularity }}</p>
+    <p><strong>Vote count</strong>{{ movie.vote_count }}</p>
+  </aside>
+</div>

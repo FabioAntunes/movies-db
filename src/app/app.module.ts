@@ -1,11 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { CoreModule } from './core';
+import { SharedModule } from './shared';
 import { AppComponent } from './app.component';
 import { NotFoundComponent } from './not-found';
+import { MoviesModule } from './movies';
 
 @NgModule({
   declarations: [
@@ -13,10 +14,11 @@ import { NotFoundComponent } from './not-found';
     NotFoundComponent,
   ],
   imports: [
-    AppRoutingModule,
     BrowserModule,
     CoreModule,
-    FormsModule
+    MoviesModule,
+    SharedModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

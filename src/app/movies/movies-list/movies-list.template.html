@@ -1,0 +1,8 @@
+<div class="loading-spinner" [hidden]="!loading"></div>
+
+<ul [hidden]="loading">
+</ul>
+
+<div class="row">
+   <mv-movie-item class="col col-sm-6 col-md-4" *ngFor="let movie of movies" [movie]="movie"></mv-movie-item>
+</div>

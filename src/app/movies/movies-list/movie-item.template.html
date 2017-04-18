@@ -1,0 +1,11 @@
+<div class="card">
+  <figure style="text-align: center; padding-top: 5px">
+    <img class="card-img-top" [src]="movie.poster_path | image" [attr.alt]="movie.original_title">
+  </figure>
+  <div class="card-block">
+    <h4 class="card-title">{{ movie.original_title }}</h4>
+    <p class="card-text">{{ movie.overview }}</p>
+    <a [routerLink]="['/movie', movie.id]" class="btn btn-success">View</a>
+  </div>
+</div>
+
